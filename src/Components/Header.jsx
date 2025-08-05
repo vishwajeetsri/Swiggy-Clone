@@ -5,6 +5,7 @@ import logo2 from "../assets/Sushi_replace.avif";
 import card1 from "../assets/card1.avif"
 import card2 from "../assets/card2.avif"
 import card3 from "../assets/card3.avif"
+import { Link } from "react-router";
 
 const Header = () => {
   return (
@@ -54,12 +55,14 @@ const Header = () => {
         </div>
       </div>
       <div className="max-w-[80%] container mx-auto flex mt-5">
-        <a href="https://www.swiggy.com/restaurants">
+        <Link to="/restaurants">
             <img src={card1} alt="" />
-        </a>
+        </Link>
+
         <a href="https://www.swiggy.com/instamart?entryId=1234&entryName=mainTileEntry4&v=1">
             <img src={card2} alt="" />
         </a>
+        
         <a href="https://www.swiggy.com/dineout">
             <img src={card3} alt="" />
         </a>

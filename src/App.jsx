@@ -1,18 +1,18 @@
 import React from 'react'
-import Header from './Components/Header'
-import FoodOptions from './Components/FoodOptions'
-import GroceryOption from './Components/GroceryOption'
-import DineOptions from './Components/DineOptions'
+import { BrowserRouter, Route, Routes } from 'react-router'
+import Home from './Components/Home'
 import Restaurant from './Components/Restaurant'
+
 
 const App = () => {
   return (
     <>
-    <Header />
-    <FoodOptions />
-    <GroceryOption />
-    <DineOptions />
-    <Restaurant />
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/restaurants' element={<Restaurant />} />
+    </Routes>
+    </BrowserRouter> 
     </>
   )
 }
