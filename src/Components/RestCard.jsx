@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router";
 
 const RestCard = ({ infoRest }) => {
   return (
+    <Link to={"/city/delhi/"+ infoRest?.info?.id}>
     <div className="max-w-[280px] mb-2 transform transition duration-200 hover:scale-95  ">
       <img
         className="w-64 h-44 object-cover rounded-2xl"
@@ -29,7 +31,10 @@ const RestCard = ({ infoRest }) => {
         <div>{infoRest?.info?.cuisines}</div>
       </div>
     </div>
+    </Link>
   );
+  
 };
+
 
 export default RestCard;
